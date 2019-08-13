@@ -1,3 +1,6 @@
+/**
+ * app.js相当于一个最顶层的项目管家
+ */
 Ext.application({  // 相当于一个大型的家族控制器
     requires: ['Ext.container.Viewport'],
     name: 'Yvan', // 代表的是一个全局的命名空间
