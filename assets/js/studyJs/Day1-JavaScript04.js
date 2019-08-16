@@ -22,12 +22,13 @@ Ext.onReady(function () {
     console.log(obj);
 
     //  枚举对象内置属性的循环
-    for (var attr in obj){
+    /*for (var attr in obj){
         alert(attr+':'+obj[attr]);
-    }
+    }*/
 
-    var Person = function () {
-        this.name = "libinglin";
+    //  创建对象及原型对象
+    /*var Person = function () {
+        this.name = "lanolin";
         this._age = 12;
         this.getAge = function () {
             return this._age;
@@ -42,5 +43,33 @@ Ext.onReady(function () {
     };
 
     var li = new Person();
-    alert(li.id)
+    alert(li.id)*/
+
+    //  单体模式
+    /*var Yvan = {};
+    Yvan.Array = {
+        each:function () {
+            alert("each...")
+        },
+        filter:function () {
+            alert("filter...")
+        }
+    }
+    Yvan.Array.each();*/
+
+    //  单体模式 -- 闭包单体
+    /*var Yvan = (function () {
+        var Array = {
+            each:function () {
+                alert("each..")
+            }
+        };
+        return {
+          arrayEach:function () {
+              Array.each();
+          }
+        };
+    })()
+    Yvan.arrayEach();*/
+
 });
