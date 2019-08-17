@@ -56,7 +56,7 @@ Ext.onReady(function () {
 
     // extend
     // Sup class
-    Ext.define('Person', {
+    /*Ext.define('Person', {
         // 这里是对于这个类的一些配置信息
         // config属性就是配置当前类的属性内容，并且会加上get和set方法
         config: {
@@ -85,11 +85,11 @@ Ext.onReady(function () {
         name: 'libinglin',
         age: 24
     });
-    alert(b.getName() + " --- " + b.getSex())
+    alert(b.getName() + " --- " + b.getSex())*/
 
     // javascript: prototype(原型):实现继承
     //Subclass
-    var Person = function (name) {
+    /*var Person = function (name) {
         this.name = name
     };
     //alert(Person, prototype constructor);
@@ -108,6 +108,86 @@ Ext.onReady(function () {
     Boy.prototype = new Person('李四');
     var b = new Boy('男', 25);
     alert(b.name);
-    alert(b.sex)
+    alert(b.sex)*/
 
+    // define的其他配置项 -- 别名和备用名
+    /*Ext.define('User',{
+        config:{
+            name:'libinglin',
+            age:23
+        },
+        // 起一个别名
+        alias:'UU',
+        // 起一个备用名字
+        alternateClassName:'UUU',
+        constructor:function (config) {
+            var me = this;
+            me.initConfig(config);
+        }
+    });
+
+    var u = Ext.create('UU');
+    alert(u.getName())*/
+
+    // statics 和 inheritableStatics -- 给当前类定义静态方法或属性 statics的子类不可被继承，inheritableStatics的子类可被继承
+    /*Ext.define('Person',{
+       config:{
+           name:'我是父类'
+       },
+        statics:{
+           statics_id:'我是Person的statics的ID，不能被子类继承'
+        },
+        inheritableStatics:{
+           inheritableStatics_id:'我是Person的inheritableStatics的ID，我可以被继承'
+        },
+        constructor:function (config) {
+            var me = this;
+            me.initConfig(config);
+        }
+    });
+
+    // 一定注意！！！实例对象是无法使用静态属性或方法的！
+    var p = Ext.create('Person')
+    alert(Person.statics_id)
+    Ext.define('User',{
+        extend:'Person',
+        config:{
+            age:20
+        }
+    })*/
+
+    // mixins 混合的配置项，可以多继承的配置
+    /*Ext.define('Sing', {
+        canSing: function () {
+            alert("canSing ...")
+        }
+    })
+    Ext.define('Say', {
+        canSay: function () {
+            alert("canSay ...")
+        }
+    })
+    Ext.define('Person', {
+        mixins: {
+            sing: 'Sing',
+            say: 'Say'
+        },
+        constructor: function (config) {
+            var me = this;
+            me.initConfig(config);
+        }
+    })
+    var girl = Ext.create('Person');
+    girl.canSay();
+    girl.canSing();*/
+
+    // requires 和 uses 以及 singleton
+    /*Ext.define('MyComponent', {
+        // 可能需要EXT或者是其他类的支持
+        // requires加载需要的类时机是：当前类初始化之前加载
+        // requires: ['Ext.window.Window','Ext.button.Button']
+        // uses加载需要的类时机是：当前类初始化后加载
+        // uses:['Ext.form.Panel','Ext.grid.Panel']
+        // singleton:true // 当前的类就被当做为一个单例对象
+    });*/
 });

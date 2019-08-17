@@ -42,6 +42,7 @@ Ext.onReady(function () {
             })
         }
     });
+    console.log(btn2);
     var btn3 =Ext.create('Ext.button.Button',{
         text:'我是按钮3 -- 把窗口3排在最前面',
         style:'margin-top:50px;margin-left:50px',
