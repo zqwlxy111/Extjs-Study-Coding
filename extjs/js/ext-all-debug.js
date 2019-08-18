@@ -94676,7 +94676,7 @@ Ext.define('Ext.view.AbstractView', {
         
         
         if (me.up('[isCollapsingOrExpanding]')) {
-            Ext.Function.defer(me.applyFirstRefresh, 100, me);
+            Ext.Function.defer(me.applyFirstRefresh, 100);
         } else {
             Ext.Function.defer(function () {
                 if (!me.isDestroyed) {
@@ -109076,9 +109076,9 @@ Ext.define('Ext.grid.header.Container', {
     
     tempLock: function() {
         this.ddLock = true;
-        Ext.Function.defer(function() {
+        Ext.Function.defer(function () {
             this.ddLock = false;
-        }, 200, this);
+        }, 200);
     },
 
     onHeaderResize: function(header, w, suppressFocus) {
@@ -129884,7 +129884,7 @@ Ext.define('Ext.tree.ViewDropZone', {
 
     
     queueExpand : function(node) {
-        this.expandProcId = Ext.Function.defer(this.expandNode, this.expandDelay, this, [node]);
+        this.expandProcId = Ext.Function.defer(this.expandNode, this.expandDelay);
     },
 
     
@@ -130415,7 +130415,7 @@ Ext.define('Ext.util.History', {
             doc, elem, oldToken, oldHash;
 
         if (!contentWindow || !contentWindow.document) {
-            Ext.Function.defer(this.checkIFrame, 10, this);
+            Ext.Function.defer(this.checkIFrame, 10);
             return;
         }
 

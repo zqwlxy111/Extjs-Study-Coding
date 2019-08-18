@@ -939,7 +939,7 @@ Ext.define('Ext.view.AbstractView', {
         // a timer which makes it impossible to control the order of when
         // the refresh is fired.
         if (me.up('[isCollapsingOrExpanding]')) {
-            Ext.Function.defer(me.applyFirstRefresh, 100, me);
+            Ext.Function.defer(me.applyFirstRefresh, 100);
         } else {
             Ext.Function.defer(function () {
                 if (!me.isDestroyed) {

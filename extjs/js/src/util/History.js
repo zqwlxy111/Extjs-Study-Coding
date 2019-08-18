@@ -113,7 +113,7 @@ Ext.define('Ext.util.History', {
             doc, elem, oldToken, oldHash;
 
         if (!contentWindow || !contentWindow.document) {
-            Ext.Function.defer(this.checkIFrame, 10, this);
+            Ext.Function.defer(this.checkIFrame, 10);
             return;
         }
 

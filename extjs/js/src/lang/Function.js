@@ -286,19 +286,16 @@ Ext.Function = {
      *         alert('Anonymous');
      *     }, 100);
      *
-     * {@link Ext#defer Ext.defer} is alias for {@link Ext.Function#defer Ext.Function.defer}
+     * {@link Ext#defer Ext.defer} is alias for {@link Ext.Function.defer.Function#defer Ext.Function.defer}
      *
      * @param {Function} fn The function to defer.
      * @param {Number} millis The number of milliseconds for the setTimeout call
      * (if less than or equal to 0 the function is executed immediately)
-     * @param {Object} scope (optional) The scope (`this` reference) in which the function is executed.
      * **If omitted, defaults to the browser window.**
-     * @param {Array} args (optional) Overrides arguments for the call. (Defaults to the arguments passed by the caller)
-     * @param {Boolean/Number} appendArgs (optional) if True args are appended to call args instead of overriding,
      * if a number the args are inserted at the specified position
      * @return {Number} The timeout id that can be used with clearTimeout
      */
-    defer: function(fn, millis, scope, args, appendArgs) {
+    defer: function (fn, millis) {
         fn = Ext.Function.bind(fn, scope, args, appendArgs);
         if (millis > 0) {
             return setTimeout(Ext.supports.TimeoutActualLateness ? function () {

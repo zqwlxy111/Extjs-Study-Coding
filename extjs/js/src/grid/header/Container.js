@@ -592,9 +592,9 @@ Ext.define('Ext.grid.header.Container', {
      */
     tempLock: function() {
         this.ddLock = true;
-        Ext.Function.defer(function() {
+        Ext.Function.defer(function () {
             this.ddLock = false;
-        }, 200, this);
+        }, 200);
     },
 
     onHeaderResize: function(header, w, suppressFocus) {

@@ -64,7 +64,7 @@ Ext.define('Ext.tree.ViewDropZone', {
 
     // @private
     queueExpand : function(node) {
-        this.expandProcId = Ext.Function.defer(this.expandNode, this.expandDelay, this, [node]);
+        this.expandProcId = Ext.Function.defer(this.expandNode, this.expandDelay);
     },
 
     // @private
