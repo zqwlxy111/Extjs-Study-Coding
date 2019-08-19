@@ -1,12 +1,5 @@
 /**
- * ExtJS扩展原生Javascript
- -Ext.Object
- -Ext.Number
- -Ext.String
- -Ext.Array
- -Ext.Function
- -Ext.Date
- -Ext.Error
+ * 动态加载js文件
  */
 Ext.onReady(function () {
 

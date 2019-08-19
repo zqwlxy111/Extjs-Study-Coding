@@ -45,6 +45,9 @@ Ext.onReady(function () {
     var d1 = Ext.get('d1');
     var sp = Ext.get('sp');
 
+    /*var d2 = Ext.fly('d1');
+    alert(d2.isFly); // 判断是否为享元模式*/
+
     // contains
     // alert(d1.contains(sp));
 
@@ -75,7 +78,115 @@ Ext.onReady(function () {
     /*var parent = sp.parent();
     alert(parent.dom.innerHTML);*/
 
-    // query
+    // query -- 是Ext.query 不是Ext.dom.Element.query
+    /*var arr = Ext.query('span', 'd1');
+    Ext.Array.each(arr, function (item) {
+        alert(item.innerHTML);
+    });*/
 
+    // select -- Ext.select 返回的都是对象，它的属性elements是元素集合(！！！不要使用id选择器)
+    // Ext.dom.CompositeElementLite(HTMLElement) / Ext.dom.CompositeElement(Ext.dom.Element)
+    // 参数说明：1 selector 选择器 2 返回的集合对象（false Ext.dom.CompositeElementLite | true Ext.dom.CompositeElement） 3 指定的根节点开始查找
+    /*var list = Ext.select('span', false, 'd1');
+    console.log(list);
+    Ext.Array.each(list.elements,function (el) {
+        alert(el.innerHTML);
+    })*/
 
+    /** @MethodName: Ext.dom.Element get fly getDom
+     * @Description: 操作系最常用的三个方法
+     * @Return:
+     * @Author: Yvan
+     * @Date: 2019/8/19/0019  14:17
+     * 操作系方法：
+     * appendTo：将当前元素追加到指定元素中
+     * appendChild: 在当前元素中追加元素
+     * createChild: 在元素中插入由DomHelper对象创建的元素
+     * insertAfter： 将元素插入到指定元素之
+     * insertBefore：将元素插入到指定元素之前
+     * insertSibling：在当前元素前或后插入（或创建）元素（同层）
+     * insertHtml: 在当前元素内插入html代码
+     * remove：移除当前元素
+     * replace：使用当前元素替换指定元素
+     * replaceWith：使用创建的元素替换指定元素
+     * wrap：创建一个元素，并被创建的元素包裹起来
+     */
+
+    // appendTo -- 这2个元素必须存在document里
+    // sp.appendTo('d2');
+
+    // appendChild
+    // sp.appendChild('d2');
+
+    // createChild
+    /*sp.createChild({
+        tag: 'ol',
+        id: 'item1',
+        children:[
+            {tag:'li',html:'item1'},
+            {tag:'li',html:'item2'}
+        ]
+    })*/
+
+    // insertAfter
+    // sp.insertAfter(Ext.get('d2'));
+
+    // insertBefore
+    // sp.insertBefore(Ext.get('d2'));
+
+    // insertSibling -- 在当前元素前或后插入（或创建）元素（同层）
+    /*sp.insertSibling([
+        {
+            tag: 'ol',
+            id: 'item1',
+            children:[
+                {tag:'li',html:'item1'},
+                {tag:'li',html:'item2'}
+            ]
+        },
+        {
+            tag: 'ol',
+            id: 'item2',
+            children:[
+                {tag:'li',html:'item2'},
+                {tag:'li',html:'item3'}
+            ]
+        }
+    ])*/
+
+    // insertHtml
+    // 参数说明：1 插入的位置，与当前元素的位置关系 - beforeBegin, afterBegin, beforeEnd, afterEnd
+    // 2 HTML片断
+    // sp.insertHtml('afterEnd','<div>我是被插入的内容</div>')
+
+    // remove
+    // sp.remove();
+
+    // replace -- 使用当前元素替换传递进来的元素，被替换的元素被删除
+    // sp.replace('d2');
+
+    // replaceWith -- 使用传递进来的元素替换当前的元素，当前的元素将被删除
+    sp.replaceWith('d2');
+
+    // wrap
+    // sp.wrap('<h1>我是被包裹的内容</h1>')
+
+    /** @MethodName: Ext.dom.Element get fly getDom
+     * @Description: 操作样式系最常用的三个方法
+     * @Return:
+     * @Author: Yvan
+     * @Date: 2019/8/19/0019  14:17
+     * 操作系方法：
+     * appendTo：将当前元素追加到指定元素中
+     * appendChild: 在当前元素中追加元素
+     * createChild: 在元素中插入由DomHelper对象创建的元素
+     * insertAfter： 将元素插入到指定元素之
+     * insertBefore：将元素插入到指定元素之前
+     * insertSibling：在当前元素前或后插入（或创建）元素（同层）
+     * insertHtml: 在当前元素内插入html代码
+     * remove：移除当前元素
+     * replace：使用当前元素替换指定元素
+     * replaceWith：使用创建的元素替换指定元素
+     * wrap：创建一个元素，并被创建的元素包裹起来
+     */
 });
