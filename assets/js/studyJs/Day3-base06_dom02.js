@@ -166,7 +166,7 @@ Ext.onReady(function () {
     // sp.replace('d2');
 
     // replaceWith -- 使用传递进来的元素替换当前的元素，当前的元素将被删除
-    sp.replaceWith('d2');
+    // sp.replaceWith('d2');
 
     // wrap
     // sp.wrap('<h1>我是被包裹的内容</h1>')
@@ -176,18 +176,63 @@ Ext.onReady(function () {
      * @Return:
      * @Author: Yvan
      * @Date: 2019/8/19/0019  14:17
-     * 操作系方法：
-     * appendTo：将当前元素追加到指定元素中
-     * appendChild: 在当前元素中追加元素
-     * createChild: 在元素中插入由DomHelper对象创建的元素
-     * insertAfter： 将元素插入到指定元素之
-     * insertBefore：将元素插入到指定元素之前
-     * insertSibling：在当前元素前或后插入（或创建）元素（同层）
-     * insertHtml: 在当前元素内插入html代码
-     * remove：移除当前元素
-     * replace：使用当前元素替换指定元素
-     * replaceWith：使用创建的元素替换指定元素
-     * wrap：创建一个元素，并被创建的元素包裹起来
+     * 操作样式系方法：
+     * addCls:增加css样式到元素,重复的样式会自动过滤
+     * applyStyles:设置元素的style属性
+     * setStyle:为元素设置样式
+     * getStyle:返回元素的当前样式和计算样式
+     * getStyleSize:返回元素的样式尺寸
+     * setOpacity:设置不透明度
+     * clearOpacity:;清理不透明度设置
+     * getColor:返回css颜色属性的值,返回值为6位数组的16进制颜色值
+     * boxWrap:使用 box. Markup定义的HTML代码包装元素
+     * addClsOnClick：当点击该元素的时候添加样式
+     * addClsOnOver：当鼠标移动到该元素的时候添加样式
+     * getMargin:返回值具有top、left、 right、 bottom属性的对象,属性值为响应的元素margin值。
+     * removedCls:删除元素的样式
+     * replaceClS:替换元素的样式
+     * set:设置元素属性
+     * radioCls:为当前元素添加样式,并删除其兄弟节点的元素
+     * unituzeBox:将表示margin大小的对象转换为字符串
      */
+
+    // addCls
+    // sp.addCls('red');
+
+    // applyStyles
+    // sp.applyStyles('color:blue');
+
+    // setStyle
+    sp.setStyle('backgroundColor', 'yellow');
+
+    // getStyle
+    // alert(sp.getStyle('fontSize'));
+
+    // getStyleSize
+    // alert(Ext.encode(sp.getStyleSize()));
+
+    // setOpacity
+    // sp.setOpacity('0.8');
+
+    // addClsOnClick
+    // sp.addClsOnClick('red')
+
+    // addClsOnOver
+    // sp.addClsOnOver('red')
+
+    // getMargin
+    // alert(Ext.encode(sp.getMargin()));
+    // alert(sp.getMargin('b')) -- r l t b
+
+    // removedCls
+    /*sp.addCls('sp222');
+    sp.removeCls('sp222');*/
+
+    // replaceClS
+    /*sp.addCls('red');
+    sp.replaceCls('red','yellow')*/
+
+    //
+
 
 });
