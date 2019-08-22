@@ -24,4 +24,6 @@
 16. 把对象转换成字符串形式：Ext.encode
 17. 把一个字符串转换成JavaScript对象：Ext.decode
 18. Ext.get()获取的是Ext封装好的DOM对象，Ext.GetDom()获取的是html原生的DOM对象
-19.
+19. Ext.DomQuery这个类下的所有方法全部使用的是原生的HTMLElement对象，不是Ext封装好的Dom对象
+20. Ext.select()返回的是Ext.CompositeElement对象
+21.
