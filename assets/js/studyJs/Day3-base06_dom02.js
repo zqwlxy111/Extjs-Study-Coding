@@ -16,7 +16,7 @@ Ext.onReady(function () {
         width: '100%',
         height: 400,
         renderTo: Ext.getBody(),
-        html: '<div id="d1"><span id="sp">我是span的内容</span><div id="d2">我的d2的内容</div></div><input id="inp"/>'
+        html: '<div id="d1"><span id="sp">我是span的内容</span><div id="d2">我的d2的内容</div></div><input id="inp" value="我是input"/><form id="f1"><input name="uname" value="yvan"><input name="pwd" value="Sa1111"></form>'
     });
 
 
@@ -378,7 +378,7 @@ Ext.onReady(function () {
     // sp.center(d1); // 参数可以不填，不填就是以文档窗口居中
 
     // getLoader
-    var loader = inp.getLoader();   // return ElementLoader对象
+    /*var loader = inp.getLoader();   // return ElementLoader对象
     loader.load({           // 该类的配置项 -- 注意传给本方法的任何选项 将会覆盖类的默认值。
         url: 'assets/json/students.json',
         renderer:function (loader,response) {
@@ -390,5 +390,44 @@ Ext.onReady(function () {
             Ext.getDom('inp').value = obj.students[0].name;
 
         }
-    })
+    })*/
+
+    // load:直接调用ElementLoader的load方法为元素加载内容
+
+    // highlight
+    // d2.highlight();
+
+    // show
+    /*d2.hide({duration:2000}); // 2秒后消失
+    d2.show({duration:8000});*/
+
+    // ghost -- 向某个方向移动消失
+    /*d2.ghost('t',{
+        duration: 5000
+    });*/
+
+    // fadeIn
+    // d2.fadeIn({ opacity: .25, duration: 2000});  // 从100%逐渐淡出到25%，过程为2秒
+
+    // slideIn
+    // d2.slideIn('t',{duration: 2000})
+
+    // getValue
+    // alert(inp.getValue());
+
+    // mask -- 添加遮罩
+    // d2.mask('这是一个遮罩');
+    // Ext.getBody().mask('Please wait a moment!...');
+
+    // unmask -- 删除遮罩
+    // d2.unmask();
+
+    // serializeForm  -- 序列化为url编码的字符串
+    // alert(Ext.dom.Element.serializeForm('f1'));
+
+    // unselectable
+    inp.unselectable();
+
+
+
 });
