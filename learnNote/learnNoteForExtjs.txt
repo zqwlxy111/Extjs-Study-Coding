@@ -27,4 +27,6 @@
 19. Ext.DomQuery这个类下的所有方法全部使用的是原生的HTMLElement对象，不是Ext封装好的Dom对象
 20. Ext.select()返回的是Ext.CompositeElement对象
 21. 在创建panel的时候要写html的属性，不然会不显示
-22.
+22. JavaScript事件流（事件传播）分为3个阶段：1. 捕获  2. 目标  3. 冒泡
+23. 所谓的事件冒泡，其实就是浏览器在捕获目标后触发函数时，会自发向上找寻其他元素是否有对应的函数（click / mouseover ...）并一起执行。
+24. W3C提供了一个关键字event事件对象
