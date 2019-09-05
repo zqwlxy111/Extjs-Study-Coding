@@ -6,6 +6,8 @@
  *
  */
 
+// 利用观察者模式实现自定义事件功能
+
 // 1. 由于浏览器他自己能定义内置的事件（click / blur），我们也应该有一个类似浏览器这样的类，这个类自己去内部定义一些事件（自定义事件）
 var Observable = function () {
     // 盛放自己所定义的事件类型
@@ -96,3 +98,8 @@ ob.on('stop', fn2);
 ob.un('stop', fn2);
 ob.fr('start');
 ob.fr('stop');
+
+// Ext.util.Observable 类是为了为开发者提供一个自定义事件的接口
+// 观察者模式：（报社，订阅者）被观察者、 观察者
+// Ext.util.Observable -- 被观察者
+// 所有继承（混入）Ext.util.Observable类的对象（子类） -- 观察者
