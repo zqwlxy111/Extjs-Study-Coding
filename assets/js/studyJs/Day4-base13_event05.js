@@ -56,7 +56,7 @@ Ext.onReady(function () {
         close:function () {
             alert('我被关闭了。。。');
         }
-    })
+    });
     win.show();
 
 });
