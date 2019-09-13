@@ -25,15 +25,29 @@ Ext.onReady(function () {
             {name: 'age', type: 'int'},
             {name: 'email', type: 'auto'}
         ]
-    })
+    });
     // 实例化Person类
     // 1. new 关键字
-    var p = new Person({
+    /*var p = new Person({
         name: 'yvan',
         age: 26,
         email: 'yvan.libinglin@gmail.com'
     });
-    alert(p.get('name'));
-    // 2.
-    // 3.
+    alert(p.get('name'));*/
+
+    // 2. create
+    /*var p = Ext.create('Person', {
+        name: 'yvan',
+        age: 26,
+        email: 'yvan.libinglin@gmail.com'
+    });
+    alert(p.get('name'));*/
+
+    // 3. ModelManager
+    /*var p = Ext.ModelManager.create({
+        name: 'yvan',
+        age: 26,
+        email: 'yvan.libinglin@gmail.com'
+    }, 'Person');
+    alert(p.get('name'));*/
 });
