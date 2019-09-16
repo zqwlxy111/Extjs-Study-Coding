@@ -32,4 +32,24 @@
 24. W3C提供了一个关键字event事件对象
 25. Ext.util.Observable类是为了开发者在自定义类的时候使用mixins继承这个类，从而可以使创建的这个类可以自定义新的监听事件
 26. Ext的事件分为浏览器事件和自定义事件，通过Observable接口提供了一套完全自定义事件机制，然后通过EventManage事件工具类对原生事件的一次封装，屏蔽了浏览器之间的差异，最后保证Observable、EventManage他们两套机制暴露出相同的接口，这两套机制相互配合使用，因此可以随意的通过on、un方法绑定原生事件或自定义事件来完成事件的处理。
-27.
+27. xtype主要用于对象内的新建组件中使用
+=================   Ext.工具栏   =========================
+1. addButton() 添加一个或多个Ext.Toolbar.Button/SplitButton 对象
+2. addElement() 添加element元素
+3. addField() 添加表单组件
+4. addFill() 添加一个用于充满工具条的空白元素
+5. addSeparator() 添加一个工具栏的分隔符
+6. addText() 添加一个字符串
+7. add() 该方法用于向工具栏添加元素，它支持一个变长的参数列表，可以一次性加入多个工具栏元素（按钮、HTMLElement、Field、'-'、'->'、String）
+=================    Ext.菜单栏   =========================
+1. addElement() 添加element元素
+2. addItem() 添加一个已存在的菜单项
+3. addMenuItem() 根据一个菜单项配置对象，添加菜单项
+4. addSeparator() 添加菜单分隔符
+5. addText() 添加一个字符串
+==================    Ext.formPanel   =====================
+1. getFrom() 获取表单面板对应的基本表单对象
+2. load() 加载表单内容（该方法是Ext.form.BasicForm.load的代理）
+3. startMonitoring() 开始监控表单的有效状态
+4. stopMonitoring() 停止监控表单的有效状态
+==================

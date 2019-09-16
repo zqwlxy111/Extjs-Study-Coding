@@ -13,3 +13,12 @@
 .top-monitor{
     background: url("/Extjs-Study-Coding/assets/img/top-monitor.png");
 }
+.createFile{
+    background: url("/Extjs-Study-Coding/assets/img/folder/folder_add.png");
+}
+.deleteFile{
+    background: url("/Extjs-Study-Coding/assets/img/folder/folder_delete.png");
+}
+.saveFile{
+    background: url("/Extjs-Study-Coding/assets/img/folder/folder.png");
+}
