@@ -33,6 +33,7 @@
 25. Ext.util.Observable类是为了开发者在自定义类的时候使用mixins继承这个类，从而可以使创建的这个类可以自定义新的监听事件
 26. Ext的事件分为浏览器事件和自定义事件，通过Observable接口提供了一套完全自定义事件机制，然后通过EventManage事件工具类对原生事件的一次封装，屏蔽了浏览器之间的差异，最后保证Observable、EventManage他们两套机制暴露出相同的接口，这两套机制相互配合使用，因此可以随意的通过on、un方法绑定原生事件或自定义事件来完成事件的处理。
 27. xtype主要用于对象内的新建组件中使用
+28. label用于向前端页面展示给用户看到的，name表示字段的名称，value表示向服务器传送的字段的具体的值
 =================   Ext.工具栏   =========================
 1. addButton() 添加一个或多个Ext.Toolbar.Button/SplitButton 对象
 2. addElement() 添加element元素
