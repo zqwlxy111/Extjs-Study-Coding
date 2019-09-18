@@ -167,6 +167,20 @@ Ext.onReady(function () {
                         }
                     }
                 }
+            },
+            {
+                xtype: 'timefield',
+                id: 'loginTime',
+                fieldLabel:'登录时间',
+                increment:60,
+                maxValue: '19:00',
+                maxText: '登录时间不能晚于19:00'
+            },
+            {
+                xtype: 'datefield',
+                fieldLabel: '登录日期',
+                id: 'loginDate',
+                format:'Y-m-d'
             }
         ],
         buttons: [

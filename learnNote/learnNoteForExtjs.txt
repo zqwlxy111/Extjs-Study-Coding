@@ -53,4 +53,10 @@
 2. load() 加载表单内容（该方法是Ext.form.BasicForm.load的代理）
 3. startMonitoring() 开始监控表单的有效状态
 4. stopMonitoring() 停止监控表单的有效状态
-==================
+==================      Ext.Panel     ======================
+1. 基本包括：Bottom toolbars 底部 / Top toolbars 顶部 / Header 头部 / Footer 脚部 / body 主体
+==================     Ext布局之路     ======================
+1. Auto 自动布局    Fit 自适应布局     Accordion 折叠布局    Card 卡片式布局     Anchor 锚点布局     Absolute 绝对位置布局     CheckBoxGroup 复选框组布局     Column 列布局     Table 表格布局      Border 边框布局     Box 盒布局
+2. Fit布局将使唯一的子元素充满容器，如果当前容器中存在多个子面板则只有一个会显示
+3. Accordion布局可以包含多个子面板，任何时候都只有一个子面板处于打开状态，每个面板都内置了对展开和收缩功能的支持（手风琴效果）
+4.
